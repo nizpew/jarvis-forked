@@ -57,10 +57,14 @@ python main.py
 
 Rodar com GUI
 ```bash
-
+ollama serve &
+cd jarvis-forked
 cd koki
 npm install
 npm start
+cd ..
+source venv/bin/activate
+python3.10 main.py
 ```
 
 
