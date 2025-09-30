@@ -12,7 +12,7 @@ Este fork contém ajustes para rodar localmente, com TTS offline usando Kokoro, 
 Requerimentos: 
 RAM: ~3.3–3.5 GB
 Disco:  Total aproximado: 4,5–5,7 GB
-
+tempo de resposta atual em maquina de 6G ram: 1.41 minutos
 ---
 
 ## Instalação
