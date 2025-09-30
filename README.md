@@ -1,7 +1,7 @@
-
 # J.A.R.V.I.S (Forked & Modified)
 
-**Aviso:** Este projeto é baseado no [repositório original do J.A.R.V.I.S](https://github.com/codewithbro95/J.A.R.V.I.S).
+**Aviso:** Este projeto é baseado no [repositório original do J.A.R.V.I.S](https://github.com/codewithbro95/J.A.R.V.I.S).  
+Este fork está hospedado em: [https://github.com/nizpew/jarvis-forked](https://github.com/nizpew/jarvis-forked)
 
 Este fork contém ajustes para rodar localmente, com TTS offline usando Kokoro, integração opcional de Whisper, e correções em OllamaNLP para evitar erros caso certas variáveis não estejam definidas.
 
@@ -16,8 +16,8 @@ Recomenda-se criar um **virtual environment** para instalar todas as dependênci
 1. Clonar o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/J.A.R.V.I.S.git
-cd J.A.R.V.I.S
+git clone https://github.com/nizpew/jarvis-forked.git
+cd jarvis-forked
 ````
 
 2. Rodar o script de instalação (`wizard.sh`) para configurar Python 3.10, criar venv e instalar todos os pacotes:
@@ -102,5 +102,4 @@ python main.py
 3. Para utilizar TTS offline ou NLP, garanta que os arquivos de modelo estejam na pasta `models`.
 
 ---
-
 
