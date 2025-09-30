@@ -16,13 +16,15 @@ Recomenda-se criar um **virtual environment** para instalar todas as dependênci
 1. Clonar o repositório:
 
 ```bash
+
+
 git clone https://github.com/nizpew/jarvis-forked.git
 cd jarvis-forked
-````
 
-2. Rodar o script de instalação (`wizard.sh`) para configurar Python 3.10, criar venv e instalar todos os pacotes:
+  wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
 
-```bash
+  sudo apt-get install portaudio19 ; wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx\nwget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.json
+
 chmod +x wizard.sh
 ./wizard.sh
 ```
@@ -90,6 +92,7 @@ ollama==1.0.0
 1. Ativar o venv:
 
 ```bash
+ollama serve &
 source venv/bin/activate
 ```
 
