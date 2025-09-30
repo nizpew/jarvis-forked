@@ -37,12 +37,22 @@ chmod +x wizard.sh
 ./wizard.sh
 ```
 
-3. Ativar o ambiente virtual:
+ # 3. Run:
+
 
 ```bash
+# no diretorio do projeto jarvis
 source venv/bin/activate
+ollama serve &
+
 ```
 
+. Rodar o J.A.R.V.I.S:
+
+```bash
+python main.py
+#agora fala alguma coisa, aceita apenas inglês por enquanto.
+```
 
 
 
@@ -99,21 +109,6 @@ python-dotenv==1.0.1
 ollama==1.0.0
 ```
 
-1. Ativar o venv:
-
-```bash
-source venv/bin/activate
-sudo chmod +x wizard.sh ; ./wizard.sh
-ollama serve &
-
-```
-
-2. Rodar o J.A.R.V.I.S:
-
-```bash
-python main.py
-#agora fala alguma coisa, aceita apenas inglês por enquanto.
-```
 
 3. Para utilizar TTS offline ou NLP, garanta que os arquivos de modelo estejam na pasta `models`.
 
