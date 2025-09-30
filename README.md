@@ -7,6 +7,14 @@ Este fork contém ajustes para rodar localmente, com TTS offline usando Kokoro, 
 
 ---
 
+
+
+Requerimentos: 
+RAM: ~3.3–3.5 GB
+Disco:  Total aproximado: 4,5–5,7 GB
+
+---
+
 ## Instalação
 
 Recomenda-se criar um **virtual environment** para instalar todas as dependências.  
@@ -35,7 +43,15 @@ chmod +x wizard.sh
 source venv/bin/activate
 ```
 
-4. Baixar os modelos necessários (Kokoro, Whisper, etc.) conforme instruções no script ou na pasta `models`.
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -68,6 +84,10 @@ source venv/bin/activate
 
 ## Dependências (com versões recomendadas)
 
+
+WIZARD.SH já faz tudo
+
+
 ```text
 aiohttp==3.8.4
 numpy==1.24.5
@@ -79,27 +99,20 @@ python-dotenv==1.0.1
 ollama==1.0.0
 ```
 
-> Para instalar manualmente dentro do venv:
->
-> ```bash
-> pip install -r requirements.txt
-> ```
-
----
-
-## Uso
-
 1. Ativar o venv:
 
 ```bash
-ollama serve &
 source venv/bin/activate
+sudo chmod +x wizard.sh ; ./wizard.sh
+ollama serve &
+
 ```
 
 2. Rodar o J.A.R.V.I.S:
 
 ```bash
 python main.py
+#agora fala alguma coisa, aceita apenas inglês por enquanto.
 ```
 
 3. Para utilizar TTS offline ou NLP, garanta que os arquivos de modelo estejam na pasta `models`.
