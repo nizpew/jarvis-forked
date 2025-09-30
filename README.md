@@ -55,9 +55,13 @@ python main.py
 ```
 
 
+Rodar com GUI
+```bash
 
-
-
+cd koki
+npm install
+npm start
+```
 
 
 
