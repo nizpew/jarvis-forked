@@ -1,5 +1,39 @@
 
-Recomenda-se criar um **virtual environment** para instalar todas as dependências.
+# J.A.R.V.I.S (Forked & Modified)
+
+**Aviso:** Este projeto é baseado no [repositório original do J.A.R.V.I.S](https://github.com/codewithbro95/J.A.R.V.I.S).
+
+Este fork contém ajustes para rodar localmente, com TTS offline usando Kokoro, integração opcional de Whisper, e correções em OllamaNLP para evitar erros caso certas variáveis não estejam definidas.
+
+---
+
+## Instalação
+
+Recomenda-se criar um **virtual environment** para instalar todas as dependências.  
+
+### Passos
+
+1. Clonar o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/J.A.R.V.I.S.git
+cd J.A.R.V.I.S
+````
+
+2. Rodar o script de instalação (`wizard.sh`) para configurar Python 3.10, criar venv e instalar todos os pacotes:
+
+```bash
+chmod +x wizard.sh
+./wizard.sh
+```
+
+3. Ativar o ambiente virtual:
+
+```bash
+source venv/bin/activate
+```
+
+4. Baixar os modelos necessários (Kokoro, Whisper, etc.) conforme instruções no script ou na pasta `models`.
 
 ---
 
@@ -15,17 +49,18 @@ Recomenda-se criar um **virtual environment** para instalar todas as dependênci
 
 ## Ferramentas e Modelos Utilizados
 
-- **Kokoro (TTS local)**: Modelo ONNX para síntese de voz.  
-  Arquivo principal: `kokoro-v0_19.onnx`  
-  Arquivo de vozes: `voices-v1.0.bin`  
+* **Kokoro (TTS local)**: Modelo ONNX para síntese de voz.
 
-- **Vibranium Vision**: Módulo de visão computacional que usa OpenCV para capturar e descrever imagens.  
+  * Arquivo principal: `kokoro-v0_19.onnx`
+  * Arquivo de vozes: `voices-v1.0.bin`
 
-- **Ollama**: Modelo de NLP para processar comandos e gerar respostas inteligentes.  
+* **Vibranium Vision**: Módulo de visão computacional que usa OpenCV para capturar e descrever imagens.
 
-- **Whisper (opcional)**: Modelo de transcrição de áudio para texto (já integrado ao Interlocus).  
+* **Ollama**: Modelo de NLP para processar comandos e gerar respostas inteligentes.
 
-- **Bibliotecas Python**: ver seção Dependências abaixo.
+* **Whisper (opcional)**: Modelo de transcrição de áudio para texto.
+
+* **Bibliotecas Python**: ver seção Dependências abaixo.
 
 ---
 
@@ -40,4 +75,32 @@ webrtcvad==2.0.10
 kokoro-onnx==0.19.0
 python-dotenv==1.0.1
 ollama==1.0.0
+```
+
+> Para instalar manualmente dentro do venv:
+>
+> ```bash
+> pip install -r requirements.txt
+> ```
+
+---
+
+## Uso
+
+1. Ativar o venv:
+
+```bash
+source venv/bin/activate
+```
+
+2. Rodar o J.A.R.V.I.S:
+
+```bash
+python main.py
+```
+
+3. Para utilizar TTS offline ou NLP, garanta que os arquivos de modelo estejam na pasta `models`.
+
+---
+
 
