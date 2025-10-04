@@ -29,7 +29,9 @@ Recomenda-se criar um **virtual environment** para instalar todas as dependênci
 git clone https://github.com/nizpew/jarvis-forked.git
 cd jarvis-forked
 
-  wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+ pip install kokoro-onnx
+  wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx
+wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.json
 
   sudo apt-get install portaudio19 ; wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx\nwget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.json
 
