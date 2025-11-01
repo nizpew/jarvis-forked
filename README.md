@@ -26,8 +26,8 @@ Recomenda-se criar um **virtual environment** para instalar todas as dependênci
 ```bash
 
 
-git clone https://github.com/nizpew/jarvis-forked.git
-cd jarvis-forked
+git clone https://github.com/nizpew/jarvis-forked.git ~/J.A.R.V.I.S
+cd J.A.R.V.I.S
 
  pip install kokoro-onnx
   wget https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx
