@@ -12,7 +12,7 @@ from modules.tools.duckduckgo_search import DuckDuckGoSearch
 load_dotenv(override=True)
 
 # Variáveis de ambiente com valores padrão
-JARVIS_MODEL = os.getenv('JARVIS_MODEL', 'fotiecodes/jarvis:3b')
+JARVIS_MODEL = os.getenv('JARVIS_MODEL', 'llama3.2:3b')
 VISION_MODEL = os.getenv('VISION_MODEL', 'llava')
 
 def main():

@@ -100,7 +100,7 @@ def ollama_chat_with_function_call(model, user_message):
         print("---------------------------------")
         # Pass function result back to LLM for final response
         response = ollama.chat(model=model, messages=[
-            {'role': 'system', 'content': f"You are grounded to this response from the api: {function_result}. Use it as context to respond accurately. always stay within the scope of this data and do note be creative."},
+            {'role': 'system', 'content': f"You are a helpful assistant. Use the provided function result when available. Do not invent information beyond it.: {function_result}. Use it as context to respond accurately. always stay within the scope of this data and do note be creative."},
             {'role': 'user', 'content': user_message}
         ])
         return response
@@ -112,13 +112,13 @@ def ollama_chat_with_function_call(model, user_message):
 # Testing the functionality
 if __name__ == "__main__":
     # Example questions
-    response = ollama_chat_with_function_call('jarvis:3b', 'Why is the sky blue?')
+    response = ollama_chat_with_function_call('llama3.2:3b', 'Why is the sky blue?')
     print(response['message']['content'])
     print("##########################################")
 
-    response = ollama_chat_with_function_call('jarvis:3b', 'Can you greet me?')
+    response = ollama_chat_with_function_call('llama3.2:3b', 'Can you greet me?')
     print(response['message']['content'])
     print("##########################################")
 
-    response = ollama_chat_with_function_call('jarvis:3b', 'What is the weather like in Bamenda')
+    response = ollama_chat_with_function_call('llama3.2:3b', 'What is the weather like in Bamenda')
     print(response['message']['content'])
