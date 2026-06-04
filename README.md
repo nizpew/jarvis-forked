@@ -12,7 +12,7 @@ Este fork contém ajustes para rodar localmente, com TTS offline usando Kokoro, 
 Requerimentos: 
 RAM: ~3.3–3.5 GB
 Disco:  Total aproximado: 4,5–5,7 GB
-tempo de resposta atual em maquina de 6G ram: 1.41 minutos
+tempo de resposta atual em maquina de 16G ram: 2 segundos 
 ---
 
 ## Instalação
@@ -29,35 +29,6 @@ Recomenda-se criar um **virtual environment** para instalar todas as dependênci
 git clone https://github.com/nizpew/jarvis-forked.git ~/J.A.R.V.I.S
 cd J.A.R.V.I.S
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-brew install ollama
-brew services start ollama
-brew install python@3.10
-echo 'export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
-ollama run llama3.2
-
-python3.10 -m venv venv
-
-# Ativar ambiente virtual
-source venv/bin/activate
-
-# Atualizar pip
-python -m pip install --upgrade pip
-
-# Instalar dependência Python
-pip install kokoro-onnx
-
-# Instalar PortAudio
-brew install portaudio
-
-# Baixar modelos
-curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/kokoro-v0_19.onnx
-curl -LO https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files/voices.json
-
-# Dar permissão e executar script
 chmod +x wizard.sh
 ./wizard.sh
 ```
@@ -66,23 +37,18 @@ chmod +x wizard.sh
 
 
 ```bash
-# no diretorio do projeto jarvis
+cd J.A.R.V.I.S
 source venv/bin/activate
-ollama serve &
-
-```
-
-. Rodar o J.A.R.V.I.S:
-
-```bash
 python main.py
 #agora fala alguma coisa, aceita apenas inglês por enquanto.
+
 ```
+
 
 
 Rodar com GUI
 ```bash
-ollama serve &
+#Ainda em Beta, Mac apresenta problema pois ambos usam microfone e sao inoperantes simultaneamente
 cd jarvis-forked
 cd koki
 npm install
