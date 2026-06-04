@@ -25,6 +25,24 @@ echo 'export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"' >> ~/.zshrc
 
 export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
 
+
+
+if [ -f "requirements.txt" ]; then
+echo "Instalando requirements.txt..."
+pip install -r requirements.txt
+else
+echo "requirements.txt não encontrado."
+echo "Instalando apenas dependências mínimas..."
+
+pip install \
+    kokoro-onnx \
+    ollama \
+    requests
+
+fi
+
+
+
 echo "========================================"
 echo "Instalando Ollama"
 echo "========================================"
